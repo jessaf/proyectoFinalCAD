@@ -31,6 +31,8 @@ Partial Class DatosCiudadDetalle
         Me.lblinfpub = New System.Windows.Forms.Label()
         Me.lblpisos = New System.Windows.Forms.Label()
         Me.lbluso = New System.Windows.Forms.Label()
+        Me.lblGastoAgua = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -118,12 +120,33 @@ Partial Class DatosCiudadDetalle
         Me.lbluso.Text = "USO SUELO"
         Me.lbluso.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
+        'lblGastoAgua
+        '
+        Me.lblGastoAgua.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblGastoAgua.Location = New System.Drawing.Point(197, 191)
+        Me.lblGastoAgua.Name = "lblGastoAgua"
+        Me.lblGastoAgua.Size = New System.Drawing.Size(216, 20)
+        Me.lblGastoAgua.TabIndex = 13
+        Me.lblGastoAgua.Text = "GASTO AGUA"
+        Me.lblGastoAgua.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(37, 198)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(81, 13)
+        Me.Label6.TabIndex = 12
+        Me.Label6.Text = "Gasto de Agua:"
+        '
         'DatosCiudadDetalle
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(444, 268)
         Me.ControlBox = False
+        Me.Controls.Add(Me.lblGastoAgua)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.lbluso)
         Me.Controls.Add(Me.lblpisos)
         Me.Controls.Add(Me.lblinfpub)
@@ -155,4 +178,6 @@ Partial Class DatosCiudadDetalle
     Friend WithEvents lblinfpub As Label
     Friend WithEvents lblpisos As Label
     Friend WithEvents lbluso As Label
+    Friend WithEvents lblGastoAgua As Label
+    Friend WithEvents Label6 As Label
 End Class

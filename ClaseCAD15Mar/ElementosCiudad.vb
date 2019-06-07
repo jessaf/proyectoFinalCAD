@@ -79,6 +79,7 @@
         Dim uso As String
         Dim pisos As String
         Dim codigo As String
+        Dim gasto As String
         Dim entidad As AcadEntity = Nothing
 
         appactivateAutoCAD()
@@ -91,16 +92,19 @@
                 uso = Convert.ToString(cbUsoSUelo.SelectedIndex + 1)
                 pisos = Convert.ToString(nudPisos.Value)
                 codigo = Convert.ToString(entidad.Handle)
+                gasto = numGastoAgua.Value.ToString
                 AsignaCampoEntidad(entidad, "TIPOPROPIEDAD", tipo)
                 AsignaCampoEntidad(entidad, "IPUB", ipub)
                 AsignaCampoEntidad(entidad, "USOSUELO", uso)
                 AsignaCampoEntidad(entidad, "NUMEROPISOS", pisos)
                 AsignaCampoEntidad(entidad, "CODIGO", codigo)
+                AsignaCampoEntidad(entidad, "GASTOAGUA", gasto)
                 Mensaje("Datos Asignados a objeto " & codigo)
                 CmbTipoElem.SelectedIndex = -1
                 cbUsoSUelo.SelectedIndex = -1
                 cbIPub.SelectedIndex = -1
                 nudPisos.Value = 0
+                numGastoAgua.Value = 0
                 btnAsigna.Enabled = False
             Catch ex As Exception
                 MsgBox(ex.Message)
@@ -132,5 +136,9 @@
         Else
             Mensaje("Debe de seleccionar un objeto")
         End If
+    End Sub
+
+    Private Sub CbUsoSUelo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbUsoSUelo.SelectedIndexChanged
+        ChecaCombos()
     End Sub
 End Class

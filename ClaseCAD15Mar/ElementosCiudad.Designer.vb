@@ -31,7 +31,10 @@ Partial Class ElementosCiudad
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.BtnRecupera = New System.Windows.Forms.Button()
+        Me.numGastoAgua = New System.Windows.Forms.NumericUpDown()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.nudPisos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.numGastoAgua, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CmbTipoElem
@@ -52,7 +55,7 @@ Partial Class ElementosCiudad
         '
         'btnAsigna
         '
-        Me.btnAsigna.Location = New System.Drawing.Point(206, 208)
+        Me.btnAsigna.Location = New System.Drawing.Point(206, 234)
         Me.btnAsigna.Name = "btnAsigna"
         Me.btnAsigna.Size = New System.Drawing.Size(100, 30)
         Me.btnAsigna.TabIndex = 14
@@ -109,7 +112,7 @@ Partial Class ElementosCiudad
         Me.BtnRecupera.BackColor = System.Drawing.SystemColors.ButtonHighlight
         Me.BtnRecupera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.BtnRecupera.Font = New System.Drawing.Font("Gabriola", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnRecupera.Location = New System.Drawing.Point(358, 199)
+        Me.BtnRecupera.Location = New System.Drawing.Point(358, 225)
         Me.BtnRecupera.Margin = New System.Windows.Forms.Padding(2, 4, 2, 4)
         Me.BtnRecupera.Name = "BtnRecupera"
         Me.BtnRecupera.Size = New System.Drawing.Size(178, 43)
@@ -117,11 +120,30 @@ Partial Class ElementosCiudad
         Me.BtnRecupera.Text = "Consulta datos"
         Me.BtnRecupera.UseVisualStyleBackColor = False
         '
+        'numGastoAgua
+        '
+        Me.numGastoAgua.Location = New System.Drawing.Point(255, 191)
+        Me.numGastoAgua.Maximum = New Decimal(New Integer() {10000, 0, 0, 0})
+        Me.numGastoAgua.Name = "numGastoAgua"
+        Me.numGastoAgua.Size = New System.Drawing.Size(37, 20)
+        Me.numGastoAgua.TabIndex = 18
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(93, 193)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(80, 13)
+        Me.Label1.TabIndex = 17
+        Me.Label1.Text = "Gasto de agua:"
+        '
         'ElementosCiudad
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(642, 255)
+        Me.ClientSize = New System.Drawing.Size(642, 285)
+        Me.Controls.Add(Me.numGastoAgua)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.BtnRecupera)
         Me.Controls.Add(Me.nudPisos)
         Me.Controls.Add(Me.btnAsigna)
@@ -134,6 +156,7 @@ Partial Class ElementosCiudad
         Me.Name = "ElementosCiudad"
         Me.Text = "ElementosCiudad"
         CType(Me.nudPisos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.numGastoAgua, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -148,4 +171,6 @@ Partial Class ElementosCiudad
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents BtnRecupera As Button
+    Friend WithEvents numGastoAgua As NumericUpDown
+    Friend WithEvents Label1 As Label
 End Class

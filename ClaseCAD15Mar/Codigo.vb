@@ -143,11 +143,15 @@
 
         If Not IsNothing(astiXRec) Then
             'MsgBox("Si existe el xrecrod")
-            astiXRec.GetXRecordData(getKey, getData)
-            If Not IsNothing(getData) Then
-                valor = getData(0) 'recuperando el valor del XRecord
-                'MsgBox("Si existe el valor del xrecord y es =" & valor.ToString)
-            End If
+            Try
+                astiXRec.GetXRecordData(getKey, getData)
+                If Not IsNothing(getData) Then
+                    valor = getData(0) 'recuperando el valor del XRecord
+                    'MsgBox("Si existe el valor del xrecord y es =" & valor.ToString)
+                End If
+            Catch ex As Exception
+
+            End Try
         End If
     End Sub
 

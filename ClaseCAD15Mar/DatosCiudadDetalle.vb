@@ -3,6 +3,7 @@
     Dim uso(40) As String
     Dim infpub(40) As String
     Dim codigo As String
+    Dim gasto As String
 
     Sub New(ByVal param As String)
         ' Esta llamada es exigida por el diseñador.
@@ -17,6 +18,7 @@
         Dim vuso As Integer
         Dim vinfpub As Integer
         Dim vpisos As Integer
+        Dim gagua As Integer
         Dim val As String
         Dim entidad As AcadEntity
 
@@ -75,11 +77,14 @@
         vuso = CInt(val)
         getXdata(entidad, "NUMEROPISOS", val)
         vpisos = CInt(val)
+        getXdata(entidad, "GASTOAGUA", val)
+        gagua = CInt(val)
 
         lbltipo.Text = tipo(vtipo)
         lbluso.Text = uso(vuso)
         lblpisos.Text = CStr(vpisos)
         lblinfpub.Text = infpub(vinfpub)
+        lblGastoAgua.Text = gagua.ToString
     End Sub
 
     Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
