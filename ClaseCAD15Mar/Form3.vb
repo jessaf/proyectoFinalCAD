@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub ConexionToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConexionToolStripMenuItem.Click
-        inicializa_conexion("2019")
+        inicializa_conexion("2018")
         If Not DOCUMENTO Is Nothing Then
             dwgActual.Text = "Plano Conectado"
             dwgActual.BackColor = Color.Lime
@@ -98,5 +98,13 @@
     Private Sub AcercaDeTenochtitlanCityToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AcercaDeTenochtitlanCityToolStripMenuItem.Click
         Acerca.Show()
 
+    End Sub
+
+    Private Sub SimuladorRedesAguaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SimuladorRedesAguaToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub AgregarDatosAMapaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AgregarDatosAMapaToolStripMenuItem.Click
+        ElementosCiudad.ShowDialog()
     End Sub
 End Class

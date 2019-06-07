@@ -1192,6 +1192,47 @@
         End If
     End Function
 
+    Public Sub recuperarDiccionarioAEntidad()
+        Dim entidad As AcadEntity
+        Dim material As String = Nothing
+
+        appactivateAutoCAD()
+        Try
+            entidad = getEntidad("Seleccione una entidad")
+            If Not IsNothing(entidad) Then
+                getXdata(entidad, "IPUB", material)
+                If material Is Nothing Then
+                    DOCUMENTO.Utility.Prompt("El objetoo no tiene material asignado")               '
+                Else
+                    DOCUMENTO.Utility.Prompt("El tipo del objeto es " & material)
+                End If
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+    Public Sub AsignaCampoEntidad(entidad As AcadEntity, campo As String, valor As String)
+        If (Not IsNothing(campo) And Not IsNothing(valor) And Not IsNothing(entidad)) Then
+            addXdata(entidad, campo, valor)
+        Else
+            Mensaje("Se requiere que la entidad, el campo y su valor no sean nulos")
+        End If
+    End Sub
+    Public Sub Mensaje(ByVal msg As String)
+        MsgBox(msg, MsgBoxStyle.Information, "CAD")
+    End Sub
+    Public Function getEntidad(msg As String) As AcadEntity
+        '
+        Dim entidad As AcadEntity = Nothing
+        Dim p() As Double = Nothing
+
+        Try
+            DOCUMENTO.Utility.GetEntity(entidad, p, msg)
+        Catch ex As Exception
+            Mensaje(ex.Message)
+        End Try
+        Return entidad
+    End Function
 End Module
 
 

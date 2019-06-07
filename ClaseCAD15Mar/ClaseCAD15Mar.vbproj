@@ -80,6 +80,17 @@
     <Compile Include="Acerca.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ElementosCiudad.designer.vb">
+      <DependentUpon>ElementosCiudad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ElementosCiudad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Vehiculo.vb" />
     <Compile Include="Codigo.vb" />
     <Compile Include="Form3.Designer.vb">
@@ -93,11 +104,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -108,14 +114,17 @@
     <EmbeddedResource Include="Acerca.resx">
       <DependentUpon>Acerca.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ElementosCiudad.resx">
+      <DependentUpon>ElementosCiudad.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -132,7 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="AutoCAD">
-      <Guid>{E2077CF2-3573-4E66-B1DC-01118675056D}</Guid>
+      <Guid>{644614D2-93DC-48C6-A061-21ABCE65A4C0}</Guid>
       <VersionMajor>1</VersionMajor>
       <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>
