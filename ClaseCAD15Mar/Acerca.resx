@@ -117,4 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="TextBox2.Text" xml:space="preserve">
+    <value>Producto que contiene un mapa actual donde 
+se localiza la posicion de la zona de Tenochtitlan, 
+limitándose los bordes y definiendo un área 
+específica en donde se desarrolla un simulador de 
+tránsito, un simulador de una red de drenaje y un simulador de viento,a través de la aplicación "Flow Design"
+Conexión con AutoCAD 2019.
+</value>
+  </data>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>Producto desarrollado por:                               
+   - Alatorre Flores Jessica          
+   - Palacio Nieto Esteban       
+   - Rodrigo Adalberto Barrera Bernal
+   - Rosas Ruiz Luis Gerardo
+   - Hugo Enrique Vega Zárate 
+   - Hernández Vallejo Juan Carlos</value>
+  </data>
 </root>
