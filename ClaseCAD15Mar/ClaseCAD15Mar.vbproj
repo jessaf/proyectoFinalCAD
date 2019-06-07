@@ -80,6 +80,12 @@
     <Compile Include="Acerca.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DatosCiudadDetalle.designer.vb">
+      <DependentUpon>DatosCiudadDetalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCiudadDetalle.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ElementosCiudad.designer.vb">
       <DependentUpon>ElementosCiudad.vb</DependentUpon>
     </Compile>
@@ -113,6 +119,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Acerca.resx">
       <DependentUpon>Acerca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatosCiudadDetalle.resx">
+      <DependentUpon>DatosCiudadDetalle.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElementosCiudad.resx">
       <DependentUpon>ElementosCiudad.vb</DependentUpon>

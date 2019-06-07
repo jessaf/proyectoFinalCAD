@@ -131,8 +131,9 @@
         Dim getData As Object = Nothing
 
         valor = Nothing
-        dictASTI = entidad.GetExtensionDictionary
+        'dictASTI = entidad.GetExtensionDictionary
         Try
+            dictASTI = entidad.GetExtensionDictionary
             astiXRec = dictASTI.Item(nameXrecord.ToUpper.Trim) ' Revisando si existe el Xrecord
 
         Catch ex As Exception
